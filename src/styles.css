@@ -4,6 +4,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-script: "Great Vibes", cursive;
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Lora", Georgia, serif;
+}
+
 /*
  * Design system definition.
  *
@@ -63,25 +69,34 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --sage: oklch(0.56 0.048 140);
+  --sage-deep: oklch(0.42 0.045 142);
+  --olive: oklch(0.3 0.035 140);
+  --blush: oklch(0.85 0.048 20);
+  --cream: oklch(0.95 0.02 92);
+  --gold: oklch(0.82 0.1 88);
+
+  --background: var(--sage);
+  --foreground: oklch(0.97 0.015 90);
+  --card: oklch(0.5 0.045 141);
+  --card-foreground: oklch(0.97 0.015 90);
+  --popover: oklch(0.5 0.045 141);
+  --popover-foreground: oklch(0.97 0.015 90);
+  --primary: var(--blush);
+  --primary-foreground: oklch(0.3 0.035 140);
+  --secondary: var(--cream);
+  --secondary-foreground: oklch(0.3 0.035 140);
+  --muted: oklch(0.5 0.04 141);
+  --muted-foreground: oklch(0.88 0.025 90);
+  --accent: var(--gold);
+  --accent-foreground: oklch(0.3 0.035 140);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.85 0.048 20 / 45%);
+  --input: oklch(0.85 0.048 20 / 35%);
+  --ring: var(--gold);
+  --shadow-elegant: 0 24px 60px -30px oklch(0.2 0.03 140 / 70%);
+  --gradient-sage: linear-gradient(180deg, var(--sage) 0%, oklch(0.52 0.05 141) 100%);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -95,6 +110,28 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+}
+
+/* Admin surfaces: light, readable, still on-theme */
+.admin-surface {
+  --background: oklch(0.97 0.015 92);
+  --foreground: oklch(0.28 0.03 140);
+  --card: oklch(1 0.005 92);
+  --card-foreground: oklch(0.28 0.03 140);
+  --popover: oklch(1 0.005 92);
+  --popover-foreground: oklch(0.28 0.03 140);
+  --primary: oklch(0.48 0.05 142);
+  --primary-foreground: oklch(0.97 0.015 92);
+  --secondary: oklch(0.92 0.03 25);
+  --secondary-foreground: oklch(0.28 0.03 140);
+  --muted: oklch(0.93 0.012 92);
+  --muted-foreground: oklch(0.48 0.02 140);
+  --accent: oklch(0.88 0.06 88);
+  --accent-foreground: oklch(0.28 0.03 140);
+  --border: oklch(0.28 0.03 140 / 15%);
+  --input: oklch(0.28 0.03 140 / 20%);
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 .dark {
@@ -140,5 +177,87 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+}
+
+@utility font-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+@utility text-blush {
+  color: var(--blush);
+}
+
+@utility text-cream {
+  color: var(--cream);
+}
+
+@utility text-gold {
+  color: var(--gold);
+}
+
+@utility bg-cream {
+  background-color: var(--cream);
+}
+
+/* Subtle botanical field used behind the whole invitation */
+@utility floral-field {
+  background-color: var(--sage);
+  background-image:
+    radial-gradient(circle at 12% 18%, oklch(0.62 0.05 140 / 55%) 0 90px, transparent 91px),
+    radial-gradient(circle at 82% 32%, oklch(0.61 0.05 140 / 45%) 0 120px, transparent 121px),
+    radial-gradient(circle at 40% 78%, oklch(0.6 0.05 140 / 40%) 0 140px, transparent 141px),
+    radial-gradient(circle at 68% 92%, oklch(0.62 0.05 140 / 35%) 0 100px, transparent 101px);
+  background-attachment: fixed;
+}
+
+/* Kolam-inspired dotted border frame */
+@utility kolam-frame {
+  position: relative;
+  border: 1px solid oklch(0.85 0.048 20 / 55%);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elegant);
+}
+
+@utility kolam-frame-inner {
+  position: absolute;
+  inset: 6px;
+  pointer-events: none;
+  border: 1px dashed oklch(0.85 0.048 20 / 40%);
+  border-radius: calc(var(--radius-lg) - 4px);
+}
+
+@utility card-invite {
+  background-color: oklch(0.5 0.045 141 / 70%);
+  backdrop-filter: blur(2px);
+  border: 1px solid oklch(0.85 0.048 20 / 40%);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-elegant);
+}
+
+@keyframes petal-fall {
+  0% { transform: translate3d(0, -10vh, 0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.9; }
+  100% { transform: translate3d(var(--drift, 40px), 110vh, 0) rotate(540deg); opacity: 0; }
+}
+
+@keyframes slow-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
 }
