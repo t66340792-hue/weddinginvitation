@@ -177,5 +177,87 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+}
+
+@utility font-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+@utility text-blush {
+  color: var(--blush);
+}
+
+@utility text-cream {
+  color: var(--cream);
+}
+
+@utility text-gold {
+  color: var(--gold);
+}
+
+@utility bg-cream {
+  background-color: var(--cream);
+}
+
+/* Subtle botanical field used behind the whole invitation */
+@utility floral-field {
+  background-color: var(--sage);
+  background-image:
+    radial-gradient(circle at 12% 18%, oklch(0.62 0.05 140 / 55%) 0 90px, transparent 91px),
+    radial-gradient(circle at 82% 32%, oklch(0.61 0.05 140 / 45%) 0 120px, transparent 121px),
+    radial-gradient(circle at 40% 78%, oklch(0.6 0.05 140 / 40%) 0 140px, transparent 141px),
+    radial-gradient(circle at 68% 92%, oklch(0.62 0.05 140 / 35%) 0 100px, transparent 101px);
+  background-attachment: fixed;
+}
+
+/* Kolam-inspired dotted border frame */
+@utility kolam-frame {
+  position: relative;
+  border: 1px solid oklch(0.85 0.048 20 / 55%);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elegant);
+}
+
+@utility kolam-frame-inner {
+  position: absolute;
+  inset: 6px;
+  pointer-events: none;
+  border: 1px dashed oklch(0.85 0.048 20 / 40%);
+  border-radius: calc(var(--radius-lg) - 4px);
+}
+
+@utility card-invite {
+  background-color: oklch(0.5 0.045 141 / 70%);
+  backdrop-filter: blur(2px);
+  border: 1px solid oklch(0.85 0.048 20 / 40%);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-elegant);
+}
+
+@keyframes petal-fall {
+  0% { transform: translate3d(0, -10vh, 0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.9; }
+  100% { transform: translate3d(var(--drift, 40px), 110vh, 0) rotate(540deg); opacity: 0; }
+}
+
+@keyframes slow-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
 }
