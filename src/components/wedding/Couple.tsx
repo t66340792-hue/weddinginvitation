@@ -1,39 +1,34 @@
 import { motion } from "motion/react";
-import { couple, images } from "@/lib/wedding-data";
+import { couple, images, mobileImages, tabletImages } from "@/lib/wedding-data";
 import { FadeUp, KolamDivider, Section, SectionTitle } from "./Ornaments";
 
 export function Couple() {
   return (
-    <Section id="story">
-      <SectionTitle kicker="The Couple" script>
-        Our Story
-      </SectionTitle>
-
+    <section id="story" className="relative">
       <motion.div
         initial={{ opacity: 0, scale: 0.94 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-        className="kolam-frame relative mx-auto mt-10 max-w-3xl overflow-hidden"
+        className="relative mx-auto w-full overflow-hidden"
       >
-        <span className="kolam-frame-inner z-10" aria-hidden />
-        <img
-          src={images.couple}
-          alt="Eswar and Veena illustrated in traditional wedding attire"
-          loading="lazy"
-          className="h-full w-full object-cover"
-        />
+        <picture className="flex h-screen w-full justify-center">
+          <source media="(max-width: 1024px)" srcSet={mobileImages.family} />
+          <img
+            src={tabletImages.family}
+            alt="Eswar and Veena illustrated in traditional wedding attire"
+            loading="lazy"
+            className="h-screen w-full object-fill"
+          />
+        </picture>
       </motion.div>
 
-      <FadeUp delay={0.1}>
-        <p className="mx-auto mt-10 max-w-2xl text-center text-base leading-relaxed text-[var(--cream)]/90 sm:text-lg">
-          Two hearts, one journey, and a lifetime of memories waiting to be created.
-        </p>
+      <FadeUp delay={0.1} className="mx-auto w-full max-w-5xl px-4 sm:px-6">
       </FadeUp>
 
       <KolamDivider className="mt-10" />
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2">
+      <div className="mx-auto mt-10 grid w-full max-w-5xl gap-6 px-4 sm:grid-cols-2 sm:px-6">
         <FadeUp>
           <div className="card-invite h-full px-6 py-8 text-center">
             <p className="font-display text-xs tracking-[0.35em] text-[var(--blush)] uppercase">Chi.</p>
@@ -59,6 +54,6 @@ export function Couple() {
           </div>
         </FadeUp>
       </div>
-    </Section>
+    </section>
   );
 }

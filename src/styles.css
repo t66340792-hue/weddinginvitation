@@ -261,3 +261,8 @@
     transition-duration: 0.001ms !important;
   }
 }
+
+/* Hide Lovable Badge */
+#lovable-badge {
+  display: none !important;
+}

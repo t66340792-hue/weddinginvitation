@@ -49,7 +49,7 @@ export function Countdown() {
   return (
     <Section id="countdown">
       <SectionTitle kicker="26 August 2026" script>
-        The Big Day
+        Muhurtham
       </SectionTitle>
 
       {t.done ? (
@@ -57,7 +57,7 @@ export function Countdown() {
           The day has arrived! ❤️
         </p>
       ) : (
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-5">
+        <div className="mx-auto mt-10 grid max-w-xs grid-cols-2 gap-3 sm:max-w-none sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-5">
           <Unit value={t.days} label="Days" />
           <Unit value={t.hours} label="Hours" />
           <Unit value={t.minutes} label="Minutes" />

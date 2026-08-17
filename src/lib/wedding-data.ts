@@ -1,15 +1,25 @@
-import haldiImg from "@/assets/Haldi.jpg.asset.json";
-import sangeethImg from "@/assets/Sangeeth.jpg.asset.json";
-import weddingImg from "@/assets/Wedding.jpg.asset.json";
-import coupleImg from "@/assets/1.jpg.asset.json";
-import familyImg from "@/assets/2.jpg.asset.json";
-
 export const images = {
-  haldi: haldiImg.url,
-  sangeeth: sangeethImg.url,
-  wedding: weddingImg.url,
-  couple: coupleImg.url,
-  family: familyImg.url,
+  haldi: "/Haldi.jpg.jpeg",
+  sangeeth: "/Sangeeth.jpg.jpeg",
+  wedding: "/Wedding.jpg.jpeg",
+  couple: "/1.jpg.jpeg",
+  family: "/2.jpg.jpeg",
+};
+
+export const mobileImages = {
+  haldi: "/mobile/Haldi.jpg.jpeg",
+  sangeeth: "/mobile/Sangeeth.jpg.jpeg",
+  wedding: "/mobile/Wedding.jpg.jpeg",
+  couple: "/mobile/1.jpg.jpeg",
+  family: "/mobile/2.jpg.jpeg",
+};
+
+export const tabletImages = {
+  haldi: "/Tablets/Haldi.png",
+  sangeeth: "/Tablets/Sangeet.png",
+  wedding: "/Tablets/wedding.png",
+  couple: "/Tablets/1.jpg.jpeg",
+  family: "/Tablets/2.png",
 };
 
 export const couple = {
@@ -40,6 +50,8 @@ export type WeddingEvent = {
   address: string[];
   maps: string;
   image: string;
+  mobileImage: string;
+  tabletImage: string;
   startUTC: string;
   endUTC: string;
 };
@@ -58,6 +70,8 @@ export const events: WeddingEvent[] = [
     address: ["429 Ann Darling Drive", "San Jose, CA 95133"],
     maps: "https://maps.app.goo.gl/xP2qfWw3hSJFVjod7?g_st=iw",
     image: images.haldi,
+    mobileImage: mobileImages.haldi,
+    tabletImage: tabletImages.haldi,
     startUTC: "20260823T160000Z",
     endUTC: "20260823T200000Z",
   },
@@ -74,6 +88,8 @@ export const events: WeddingEvent[] = [
     address: ["1214 Apollo Way (Shubham Halls)", "Sunnyvale, CA 94085"],
     maps: "https://maps.app.goo.gl/a4yH6UGc5KEHYzek9?g_st=iw",
     image: images.sangeeth,
+    mobileImage: mobileImages.sangeeth,
+    tabletImage: tabletImages.sangeeth,
     startUTC: "20260824T010000Z",
     endUTC: "20260824T050000Z",
   },
@@ -95,6 +111,8 @@ export const events: WeddingEvent[] = [
     address: ["1232 Arrowhead Avenue", "(Shiva - Vishnu Temple), Livermore, CA 94551"],
     maps: "https://maps.app.goo.gl/z72Ht4516NM2hPW79?g_st=iw",
     image: images.wedding,
+    mobileImage: mobileImages.wedding,
+    tabletImage: tabletImages.wedding,
     startUTC: "20260826T160000Z",
     endUTC: "20260826T210000Z",
   },
