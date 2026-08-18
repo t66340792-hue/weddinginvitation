@@ -1,25 +1,25 @@
 export const images = {
-  haldi: "/Haldi.jpg.jpeg",
-  sangeeth: "/Sangeeth.jpg.jpeg",
-  wedding: "/Wedding.jpg.jpeg",
-  couple: "/1.jpg.jpeg",
-  family: "/2.jpg.jpeg",
+  haldi: "/Haldi.jpg",
+  sangeeth: "/Sangeeth.jpg",
+  wedding: "/Wedding.jpg",
+  couple: "/1.jpg",
+  family: "/2.jpg",
 };
 
 export const mobileImages = {
-  haldi: "/mobile/Haldi.jpg.jpeg",
-  sangeeth: "/mobile/Sangeeth.jpg.jpeg",
-  wedding: "/mobile/Wedding.jpg.jpeg",
-  couple: "/mobile/1.jpg.jpeg",
-  family: "/mobile/2.jpg.jpeg",
+  haldi: "/Haldi.jpg",
+  sangeeth: "/Sangeeth.jpg",
+  wedding: "/Wedding.jpg",
+  couple: "/1.jpg",
+  family: "/2.jpg",
 };
 
 export const tabletImages = {
-  haldi: "/Tablets/Haldi.png",
-  sangeeth: "/Tablets/Sangeet.png",
-  wedding: "/Tablets/wedding.png",
-  couple: "/Tablets/1.jpg.jpeg",
-  family: "/Tablets/2.png",
+  haldi: "/Haldi.jpg",
+  sangeeth: "/Sangeeth.jpg",
+  wedding: "/Wedding.jpg",
+  couple: "/1.jpg",
+  family: "/2.jpg",
 };
 
 export const couple = {
