@@ -16,6 +16,9 @@ export function Closing() {
             moments with you.
           </p>
           <p className="font-script mt-6 text-3xl text-[var(--gold)]">With Love ❤️</p>
+          <div className="mt-8 text-xs tracking-widest text-[var(--cream)]/60">
+            @weddingprashantharts
+          </div>
         </div>
       </FadeUp>
     </Section>
