@@ -1,4 +1,4 @@
-# Eswai & Veena
+# Eswar & Veena
 
 Build a Premium Indian Wedding Invitation Website
 
@@ -12,7 +12,7 @@ The website should feel like a luxury digital wedding invitation, not a normal b
 
 Couple
 
-Groom: Chi. Eswai Eskala
+Groom: Chi. Eswar Eskala
 Bride: Chi. La. Sow. Veena Vysnani Garre
 
 Groom's Parents
@@ -101,7 +101,7 @@ Display a subtle floral/kolam pattern.
 
 Show:
 
-Eswai & Veena
+Eswar & Veena
 
 #VEsaiDES
 
@@ -121,7 +121,7 @@ Create a stunning hero section.
 
 Display:
 
-Eswai & Veena
+Eswar & Veena
 
 #VEsaiDES
 
@@ -348,7 +348,7 @@ Create an elegant "Our Story" / "The Couple" section.
 
 Display:
 
-Eswai & Veena
+Eswar & Veena
 
 Add the couple illustration from the uploaded design.
 
@@ -954,7 +954,7 @@ At the bottom create a beautiful closing section.
 
 Display:
 
-Eswai & Veena
+Eswar & Veena
 
 #VEsaiDES
 
