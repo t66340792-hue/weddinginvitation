@@ -24,7 +24,14 @@ export function OpeningScreen({ onOpen }: { onOpen: () => void }) {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            onClick={onOpen}
+            onClick={() => {
+              const audio = document.getElementById("wedding-audio") as HTMLAudioElement | null;
+              if (audio) {
+                audio.play().catch(console.error);
+                sessionStorage.setItem("wedding-music", "on");
+              }
+              onOpen();
+            }}
             className="font-display inline-flex items-center justify-center rounded-full border border-[var(--gold)]/70 bg-[var(--olive)]/60 backdrop-blur-sm px-8 py-3 text-sm tracking-[0.25em] text-[var(--gold)] uppercase transition-all duration-300 hover:scale-105 hover:bg-[var(--gold)]/20 hover:shadow-[0_0_30px_-8px_var(--gold)]"
           >
             Open Invitation

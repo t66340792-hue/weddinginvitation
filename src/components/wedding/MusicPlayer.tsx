@@ -19,10 +19,7 @@ export function MusicPlayer({
     const stored = sessionStorage.getItem("wedding-music");
     const shouldPlay = stored ? stored === "on" : autoStart;
     if (!shouldPlay) return;
-    audioRef.current?.play().then(
-      () => setPlaying(true),
-      () => setPlaying(false),
-    );
+    audioRef.current?.play().catch(console.error);
   }, [autoStart]);
 
   useEffect(() => {
@@ -37,18 +34,24 @@ export function MusicPlayer({
     if (!audio) return;
     if (playing) {
       audio.pause();
-      setPlaying(false);
       sessionStorage.setItem("wedding-music", "off");
     } else {
       void audio.play();
-      setPlaying(true);
       sessionStorage.setItem("wedding-music", "on");
     }
   };
 
   return (
     <div className="fixed right-4 bottom-4 z-40 sm:right-6 sm:bottom-6">
-      <audio ref={audioRef} src={src} loop preload="none" />
+      <audio 
+        id="wedding-audio"
+        ref={audioRef} 
+        src={src} 
+        loop 
+        preload="auto" 
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+      />
       <div className="card-invite flex items-center gap-3 rounded-full py-2 pr-4 pl-2">
         <button
           onClick={toggle}
