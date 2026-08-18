@@ -1,9 +1,9 @@
 export const images = {
-  haldi: "/Haldi.jpg",
-  sangeeth: "/Sangeeth.jpg",
-  wedding: "/Wedding.jpg",
-  couple: "/1.jpg",
-  family: "/2.jpg",
+  haldi: "/Tablets/Haldi.png",
+  sangeeth: "/Tablets/Sangeet.png",
+  wedding: "/Tablets/wedding.png",
+  couple: "/Tablets/1.jpg.jpeg",
+  family: "/Tablets/2.png",
 };
 
 export const mobileImages = {
@@ -15,11 +15,11 @@ export const mobileImages = {
 };
 
 export const tabletImages = {
-  haldi: "/Haldi.jpg",
-  sangeeth: "/Sangeeth.jpg",
-  wedding: "/Wedding.jpg",
-  couple: "/1.jpg",
-  family: "/2.jpg",
+  haldi: "/Tablets/Haldi.png",
+  sangeeth: "/Tablets/Sangeet.png",
+  wedding: "/Tablets/wedding.png",
+  couple: "/Tablets/1.jpg.jpeg",
+  family: "/Tablets/2.png",
 };
 
 export const couple = {
