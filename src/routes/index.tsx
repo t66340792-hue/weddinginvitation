@@ -64,6 +64,9 @@ function Index() {
             <p className="text-xs tracking-widest text-[var(--cream)]/40">
               Designed &amp; Developed by <span className="text-[var(--gold)]/60 font-medium">PrashanthArts</span>
             </p>
+            <p className="mt-2 text-xs tracking-widest text-[var(--cream)]/60">
+              @weddingprashantharts
+            </p>
           </footer>
         </main>
       )}
