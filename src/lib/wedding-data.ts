@@ -30,7 +30,7 @@ export const couple = {
   hashtag: "#VEsaidES",
   groomParents: ["S/o Smt. Eskala Prema Latha", "Sri. Eskala Krishna Prasad"],
   brideParents: [
-    "D/o Smt. Garre Jeevana Jyothi",
+    "Youngest D/o Smt. Garre Jeevana Jyothi",
     "Sri. Garre Raghu Rama Sesha Sai Kumar",
   ],
 };

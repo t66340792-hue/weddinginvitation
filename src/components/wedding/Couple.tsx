@@ -4,7 +4,7 @@ import { FadeUp, KolamDivider, Section, SectionTitle } from "./Ornaments";
 
 export function Couple() {
   return (
-    <section id="story" className="relative">
+    <section id="story" className="relative pb-16 sm:pb-24">
       <motion.div
         initial={{ opacity: 0, scale: 0.94 }}
         whileInView={{ opacity: 1, scale: 1 }}
