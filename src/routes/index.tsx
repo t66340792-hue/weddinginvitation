@@ -32,10 +32,13 @@ function Index() {
         {!opened && <OpeningScreen key="opening" onOpen={() => setOpened(true)} />}
       </AnimatePresence>
 
+      <div className={`transition-opacity duration-1000 z-50 ${showNav ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
+        <MusicPlayer src="/Song.mp3" autoStart={opened} />
+      </div>
+
       {opened && (
         <main className="relative min-h-screen overflow-hidden pb-20">
           <Petals />
-          {showNav && <MusicPlayer src="/Song.mp3" autoStart={true} />}
 
           <section id="story">
             <Couple />
